@@ -1,0 +1,8 @@
+{% extends 'JaguirreTestCRUDBundle::main.html.twig' %}
+
+{% block title%}Detalles{% endblock%}
+
+{% block content %}
+    <h1> Detalles </h1>
+    {{product.code}} - {{product.name}} - {{product.description}} - {{product.trademark}} - {{product.category}} - {{product.price}}
+{% endblock %}

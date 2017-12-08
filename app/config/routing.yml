@@ -1,0 +1,6 @@
+jaguirre_test_crud:
+    resource: "@JaguirreTestCRUDBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+

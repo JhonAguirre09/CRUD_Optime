@@ -1,0 +1,19 @@
+jaguirre_test_crud_Products:
+    path:     /
+    defaults: { _controller: JaguirreTestCRUDBundle:Default:products }
+
+jaguirre_test_crud_Details:
+    path:     /detalles/{name}
+    defaults: { _controller: JaguirreTestCRUDBundle:Default:details }
+
+jaguirre_test_crud_Create:
+    path:     /ingresar
+    defaults: { _controller: JaguirreTestCRUDBundle:Default:create }
+
+jaguirre_test_crud_Update:
+    path:     /editar
+    defaults: { _controller: JaguirreTestCRUDBundle:Default:update }
+
+jaguirre_test_crud_erase:
+    path:     /erase/{id}
+    defaults: { _controller: JaguirreTestCRUDBundle:Default:erase }

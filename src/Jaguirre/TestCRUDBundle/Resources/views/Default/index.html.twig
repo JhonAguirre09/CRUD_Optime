@@ -1,0 +1,10 @@
+{% extends 'JaguirreTestCRUDBundle::main.html.twig' %}
+  
+{% block content %}
+    {{ parent() }}
+    <h1> CRUD de Productos </h1>
+    <br><h3><a href ="{{url('jaguirre_test_crud_Products')}}">Ver Productos </a></br>
+    <br><a href ="{{url('jaguirre_test_crud_Create')}}">Ingresar Productos </a></br>
+    <br><a href ="{{url('jaguirre_test_crud_Update')}}">Editar Productos </a> </br>
+    <br><a href ="{{url('jaguirre_test_crud_Delete')}}">Eliminar Productos </a> </h3></br>
+{% endblock %}

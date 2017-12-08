@@ -1,0 +1,20 @@
+{% extends 'JaguirreTestCRUDBundle::main.html.twig' %}
+
+{% block title%}Ingresar Producto{% endblock%}
+
+{% block body %}
+    {% block content %}
+	<h1> Crear Registro de Producto </h1>
+        {{ form_start(form) }}
+    		{{ form_errors(form) }}
+ 
+    		{{ form_row(form.code) }}
+    		{{ form_row(form.name) }}
+		{{ form_row(form.description) }}
+    		{{ form_row(form.trademark) }}
+ 		{{ form_row(form.category) }}
+    		{{ form_row(form.price) }}
+
+	{{ form_end(form) }}
+    {% endblock %}
+{% endblock%}

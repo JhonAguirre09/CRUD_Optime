@@ -1,0 +1,65 @@
+{% extends 'JaguirreTestCRUDBundle::main.html.twig' %}
+
+{% block title%}Productos{% endblock%}
+
+    {% block content %}
+	<div class="row">
+	    <div class="col-sm-12">
+		<a href="{{url('jaguirre_test_crud_Create')}}">{{ form_widget(form) }}</a>
+	    </div>
+	</div>
+     <div class="table-responsive">
+	<table class="table table-condensed">
+	    <thead>
+	       <tr>
+		   <td colspan="5" align="center">
+			<h1> Listado de Productos </h1>
+		   </td>
+	    	</tr>
+	    </thead>
+	 {% for product in products %}
+	    <tbody>
+		
+	       <tr>
+		   <td>{{product.code}}</td>
+		   <td>{{product.name}}</td>
+		   <td>{{product.category}}</td>
+		   <td>
+		      <a href="{{url('jaguirre_test_crud_Update')}}" title="editar"> 
+		         <span class="glyphicon glyphicon-pencil"></span>
+		      </a>
+		   </td>
+		   <td>
+		      <a title="eliminar" data-toggle="modal" data-target="#myModal"> 
+		         <span class="glyphicon glyphicon-remove"></span>
+		      </a>
+		   </td>
+		   <td>
+		      <a href="{{url('jaguirre_test_crud_Details' ,{'name':product.name})}}" title="Ver Detalles" > 
+		         <span class="glyphicon glyphicon-eye-open"></span>
+		      </a>
+		   </td>
+	    	</tr>
+ 		
+		<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-body">
+				Estas Seguro de eliminar {{product.name}}?
+			      </div>
+			      <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+				<a href="{{path('jaguirre_test_crud_erase' , {'id':product.id})}}" class="btn btn-primary">si</a>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+	    </tbody>
+	{% endfor %}
+	</table>
+    </div>
+    
+    {% endblock %}
+
+ 
